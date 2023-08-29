@@ -6,8 +6,6 @@ Il software stampa il maggiore.*/
 
 // const number2 = Number(prompt('Inserisci il primo numero'));
 
-
-
 // if (number1 > number2) {
 //     // console.log('il numero maggiore è ' + number1);
 //     let printNumber = document.getElementById('printNumber').innerHTML = ('Il numero maggiore è: ' + number1)
@@ -48,7 +46,7 @@ Il programma stampa la somma di tutti i numeri inseriti.*/
 // let somma = 0 ;
 
 // for (let i = 0; i < 10; i++) {
-//   inputNumberUser = Number(prompt(`Inserisci un numero ${i+1}`));
+//   inputNumberUser = Number(prompt(`Inserisci il numero ${i+1}`));
 //   console.log(inputNumberUser);
 //   somma += inputNumberUser 
 // }
@@ -65,14 +63,14 @@ se è dispari inseriscilo nell’array.*/
 const emptyArray = []
 
 for (let i = 0; i < 6; i++) {
-    inputUserNumber = Number(prompt(`Inserisci un numero`))
+    inputUserNumber = Number(prompt(`Inserisci il numero ${i+1} `))
     console.log(inputUserNumber);
 
     if (isNaN(inputUserNumber)) {
         alert('Controlla, non ci sono numeri');
 
     }
-    const numberOdd = inputUserNumber % 2;
+    const numberOdd = inputUserNumber / 2;
 
     if (numberOdd) {
         emptyArray.push(inputUserNumber)
@@ -80,7 +78,7 @@ for (let i = 0; i < 6; i++) {
 
 }
 
-// console.log(emptyArray);
+console.log(emptyArray);
 
 const addToArray = document.getElementById('oddNumberPrint').innerHTML = ('I numeri inseriti sono : ' + emptyArray)
 
