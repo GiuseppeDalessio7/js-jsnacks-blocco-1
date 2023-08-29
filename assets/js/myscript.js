@@ -44,14 +44,43 @@ Il software stampa prima la parola più corta, poi la parola più lunga.*/
 Il software deve chiedere per 10 volte all’utente di inserire un numero.
 Il programma stampa la somma di tutti i numeri inseriti.*/
 
-let inputNumberUser;
-let somma = 0 ;
+// let inputNumberUser;
+// let somma = 0 ;
 
-for (let i = 0; i < 10; i++) {
-  inputNumberUser = Number(prompt(`Inserisci un numero ${i+1}`));
-  console.log(inputNumberUser);
-  somma += inputNumberUser 
+// for (let i = 0; i < 10; i++) {
+//   inputNumberUser = Number(prompt(`Inserisci un numero ${i+1}`));
+//   console.log(inputNumberUser);
+//   somma += inputNumberUser 
+// }
+
+// console.log(somma);
+// let total = document.getElementById('sommaNumeri').innerHTML = ('La somma dei numeri è: ' + somma)
+
+
+/* Snack Bonus:
+Crea un array vuoto.
+Chiedi per 6 volte all’utente di inserire un numero,
+se è dispari inseriscilo nell’array.*/
+
+const emptyArray = []
+
+for (let i = 0; i < 6; i++) {
+    inputUserNumber = Number(prompt(`Inserisci un numero`))
+    console.log(inputUserNumber);
+
+    if (isNaN(inputUserNumber)) {
+        alert('Controlla, non ci sono numeri');
+
+    }
+    const numberOdd = inputUserNumber % 2;
+
+    if (numberOdd) {
+        emptyArray.push(inputUserNumber)
+    }
+
 }
 
-console.log(somma);
-let total = document.getElementById('sommaNumeri').innerHTML = ('La somma dei numeri è: ' + somma)
+// console.log(emptyArray);
+
+const addToArray = document.getElementById('oddNumberPrint').innerHTML = ('I numeri inseriti sono : ' + emptyArray)
+
