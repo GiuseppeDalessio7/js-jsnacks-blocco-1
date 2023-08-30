@@ -60,25 +60,63 @@ Crea un array vuoto.
 Chiedi per 6 volte all’utente di inserire un numero,
 se è dispari inseriscilo nell’array.*/
 
-const emptyArray = []
+// const emptyArray = []
 
-for (let i = 0; i < 6; i++) {
-    inputUserNumber = Number(prompt(`Inserisci il numero ${i+1} `))
-    console.log(inputUserNumber);
+// for (let i = 0; i < 6; i++) {
+//     inputUserNumber = Number(prompt(`Inserisci il numero ${i+1} `))
+//     console.log(inputUserNumber);
 
-    if (isNaN(inputUserNumber)) {
-        alert('Controlla, non ci sono numeri');
+//     if (isNaN(inputUserNumber)) {
+//         alert('Controlla, non ci sono numeri');
 
-    }
-    const numberOdd = inputUserNumber / 2;
+//     }
+//     const numberOdd = inputUserNumber / 2;
 
-    if (numberOdd) {
-        emptyArray.push(inputUserNumber)
-    }
+//     if (numberOdd) {
+//         emptyArray.push(inputUserNumber)
+//     }
 
+// }
+
+// console.log(emptyArray);
+
+// const addToArray = document.getElementById('oddNumberPrint').innerHTML = ('I numeri inseriti sono : ' + emptyArray)
+
+
+
+
+
+/* Da fare con WHILE tutti I prossimi snacks
+Snack 1
+L’utente inserisce due numeri in successione, con due prompt.
+Il software stampa il maggiore. */
+
+
+
+let num = [];
+
+let i = 0;
+while (i < 2) {
+    
+    //creo prompt per chiedere di iserire i numeri
+   const userNum = Number(prompt('inserisci un numero'));
+
+
+   //verifico che sia un numero 
+
+   if (isNaN(userNum)) {
+    alert('inserisci solo numeri');
+
+   } else {
+    num.push(userNum);
+    i++
+
+   }
+};
+
+if (num[0] > num[1]) {
+    console.log(`Il numero maggiore è: ${num[0]}`);
+
+    } else {
+    console.log(`Il numero maggiore è: ${num[1]}`);
 }
-
-console.log(emptyArray);
-
-const addToArray = document.getElementById('oddNumberPrint').innerHTML = ('I numeri inseriti sono : ' + emptyArray)
-
